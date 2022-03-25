@@ -33,3 +33,23 @@ ion-content{
         }
     }
 }
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.list-header{
+    font-weight: 700;
+    color: #515151;
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    margin-top: 2.5rem;
+}
+
+.food-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}

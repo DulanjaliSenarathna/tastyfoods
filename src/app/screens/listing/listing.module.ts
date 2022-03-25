@@ -8,6 +8,8 @@ import { ListingPageRoutingModule } from './listing-routing.module';
 
 import { ListingPage } from './listing.page';
 import { SearchbarModule } from 'src/app/components/searchbar/searchbar.module';
+import { CategoryItemModule } from 'src/app/components/category-item/category-item.module';
+import { FoodCardModule } from 'src/app/components/food-card/food-card.module';
 
 @NgModule({
   imports: [
@@ -15,7 +17,9 @@ import { SearchbarModule } from 'src/app/components/searchbar/searchbar.module';
     FormsModule,
     IonicModule,
     ListingPageRoutingModule,
-    SearchbarModule
+    SearchbarModule,
+    CategoryItemModule,
+    FoodCardModule
   ],
   declarations: [ListingPage]
 })

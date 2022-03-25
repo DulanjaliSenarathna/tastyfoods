@@ -13,6 +13,13 @@
 <!-- Seachbar -->
 <app-searchbar></app-searchbar>
 
-<!-- Seachbar -->
-<div class="categories"></div>
+<!-- Category -->
+<div class="categories">
+  <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
+</div>
+
+<div class="list-header">Popular</div>
+<div class="food-list" *ngFor="let food of foods">
+  <app-food-card [item]="food"></app-food-card>
+</div>
 </ion-content>
