@@ -19,7 +19,7 @@
 </div>
 
 <div class="list-header">Popular</div>
-<div class="food-list" *ngFor="let food of foods">
-  <app-food-card [item]="food"></app-food-card>
+<div class="food-list" >
+  <app-food-card *ngFor="let food of foods" [item]="food"></app-food-card>
 </div>
 </ion-content>

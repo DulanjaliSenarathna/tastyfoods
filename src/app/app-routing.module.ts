@@ -11,10 +11,20 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+ 
   {
-    path: 'listing',
-    loadChildren: () => import('./screens/listing/listing.module').then( m => m.ListingPageModule)
+    path: 'detail',
+    loadChildren: () => import('./screens/detail/detail.module').then( m => m.DetailPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./screens/cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path:'',
+    redirectTo:'listing',
+    
+  }
 ];
 
 @NgModule({
