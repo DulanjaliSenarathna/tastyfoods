@@ -20,6 +20,6 @@
 
 <div class="list-header">Popular</div>
 <div class="food-list" >
-  <app-food-card *ngFor="let food of foods" [item]="food"></app-food-card>
+  <app-food-card *ngFor="let food of foods" [item]="food" (clicked)="goToDetailPage(food.id)"></app-food-card>
 </div>
 </ion-content>
