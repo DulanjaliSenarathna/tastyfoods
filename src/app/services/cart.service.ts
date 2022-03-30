@@ -7,13 +7,17 @@ import { CartItem } from "../models/cart.item.model";
     providedIn: 'root'
 })
  export class CartService{
-    private item$ = new BehaviorSubject<CartItem[]>([]);
+    private items$ = new BehaviorSubject<CartItem[]>([]);
 
     getCart(){
-        return this.item$.asObservable();
+        return this.items$.asObservable();
     }
 
     addToCart(newItem: CartItem){
+        this.items$.next([ ...this.items$.getValue(), newItem]);
+    }
 
+    removeItem(id:number){
+        this.items$.next(this.items$.getValue().filter((item) => item.id !== id));
     }
  }
